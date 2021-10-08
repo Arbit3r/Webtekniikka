@@ -1,3 +1,3 @@
 // JavaScript Document
 // hyvin iso meemi :))))
-'use strict'
+'use strict';
