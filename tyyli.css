@@ -8,6 +8,84 @@
 --ash-gray: #b8bdb5ff;
 --rose-madder: #e71d36ff;*/
 
+body {
+	display: flex;
+	margin: 0px;
+	padding: 0px;
+	justify-content: center;
+	
+	
+}
+#container{
+	
+	
+	display: flex;
+	background: rgba(0,36,255,1.00);
+	width: 90%;
+	flex-wrap: wrap;
+	padding: 0px;
+	border: solid;
+	border-width: 5px;
+	border-color: #4a4f52ff;
+	
+	
+}
+nav {
+	
+	background: #d2d4c8ff;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	height: 5%;
+	
+}
+section{
+	
+	
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	background: #b8bdb5ff;
+	
+	
+	
+}
+section, h1 {
+	
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	color: #e71d36ff;
+	
+}
+p.linkki{
+	
+	display: flex;
+	background: rgba(255,1,5,1.00);
+	width: 33%;
+	margin: 5px;
+	padding: 0px;
+	justify-content: center;
+	align-content: center;
+	
+}
+
+video{
+	
+	display: flex;
+    min-width: 50%; 
+    min-height: 50%;
+	justify-content: center;
+ 
+ 
+	
+}
+
+
+
+
+
+
 
 
 
