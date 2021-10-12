@@ -22,9 +22,6 @@ nappid100.addEventListener("click", d100);
 function rollDice(){
  return Math.random();
 }
-function testing(){
-  console.log("Toimii!");
-}
 function d4(){
   let muuttuja = parseInt(textBox.value);
   let luku = 1 + Math.floor(rollDice()*4);
@@ -35,7 +32,7 @@ function d4(){
 }
 function d6(){
   let muuttuja = parseInt(textBox.value);
-  let luku = +muuttuja + 1 + Math.floor(rollDice()*6);
+  let luku = 1 + Math.floor(rollDice()*6);
   let tulos = luku + muuttuja;
   console.log("d6 tulos: ", tulos)
   return tulos;
@@ -43,32 +40,32 @@ function d6(){
 }
 function d8(){
   let muuttuja = parseInt(textBox.value);
-  let luku = muuttuja + 1 + Math.floor(rollDice()*8);
+  let luku = 1 + Math.floor(rollDice()*8);
   let tulos = luku + muuttuja;
   console.log("d8 tulos: ", tulos);
   return tulos;
 }
 function d10(){
   let muuttuja = parseInt(textBox.value);
-  let luku = muuttuja + 1 + Math.floor(rollDice()*10);
+  let luku = 1 + Math.floor(rollDice()*10);
   let tulos = luku + muuttuja;
   console.log("d10 tulos: ", tulos);
   return tulos;
 }
 function d12(){
   let muuttuja = parseInt(textBox.value);
-  let luku = muuttuja + 1 + Math.floor(rollDice()*12);
+  let luku = 1 + Math.floor(rollDice()*12);
   let tulos = luku + muuttuja;
   console.log("d12 tulos: ", tulos);
   return tulos;
 }
 function d20(){
   let muuttuja = parseInt(textBox.value);
-  let luku = muuttuja + 1 + Math.floor(rollDice()*20);
+  let luku = 1 + Math.floor(rollDice()*20);
   let tulos = luku + muuttuja;
-  if (luku == 1){
+  if (luku === 1){
     console.log("Natural 1...");
-  } else if (luku == 20){
+  } else if (luku === 20){
     console.log("Natural 20!");
   }else {
   console.log("d20 tulos: ", tulos);}
@@ -76,15 +73,26 @@ function d20(){
 }
 function d100(){
   let muuttuja = parseInt(textBox.value);
-  let luku = muuttuja + 1 + Math.floor(rollDice()*100);
+  let luku = 1 + Math.floor(rollDice()*100);
   let tulos = luku + muuttuja;
   console.log("d100 tulos: ", tulos);
   return tulos;
 }
-d4();
-d6();
-d8();
-d10();
-d12();
-d20();
-d100();
+
+
+// Warhammer 40k nopat
+const nappi = document.getElementById("nappi");
+const dice = document.getElementById("amount");
+nappi.addEventListener('click', attackRoll);
+function attackRoll(){
+  let luvut = [];
+  let times = parseInt(dice.value);
+  for (let i=0; i < times; i++){
+    let luku = 1 + Math.floor(rollDice()*6);
+    luvut.push(luku);
+    }
+
+  let count = {};
+  luvut.forEach(function(i) { count[i] = (count[i]||0) + 1;});
+  console.log("Heitetyt luvut: ", count);
+}
