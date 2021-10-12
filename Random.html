@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+	<!-- Ohjeet
+
+1. Asettelu
+2.
+3.
+
+
+
+
+
+-->
+<!--Perus teksti -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap" rel="stylesheet">
+<!--Otsikko -->	
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+	
+	
+<head>
+	
+<meta charset="utf-8">
+<title>Random</title>
+<link rel="icon" href="dice.png">
+
+<link rel="stylesheet" href="tyyli.css">
+	
+	
+</head>
+
+<body>
+	
+	<div id="container">
+	<nav>
+		
+		<a class="linkki" onmouseover="over(this)" onmouseout="out(this)" href="index.html">Etusivu</a>
+		<a class="linkki" onmouseover="over(this)" onmouseout="out(this)" href="Random.html">Random</a>
+		<a class="linkki" onmouseover="over(this)" onmouseout="out(this)" href="Tietoa.html">Tietoa</a>
+		
+	</nav>
+
+	<section>
+		
+		<h1>Valitse haluamasi randomaus kone:</h1>
+		<form class="choice">
+  			<label>Kone:</label>
+  				<select id="selected" onChange="kone()">
+    				<option value="DnD">DnD</option>
+    				<option value="W40k">W40k</option>
+  				</select>
+		</form>
+		<nav id="DnD"> <!--Dnd dice roller-->
+			<h4>Modifier:</h4>
+			<label for="modifier"></label><input id="modifier" type="number" name="muunnin" value="0" placeholder="Syötä muuttuja"/>
+			<button id="nappi4">Heitä d4</button>
+			<button id="nappi6">Heitä d6</button>
+			<button id="nappi8">Heitä d8</button>
+			<button id="nappi10">Heitä d10</button>
+			<button id="nappi12">Heitä d12</button>
+			<button id="nappi20">Heitä d20</button>
+			<button id="nappi100">Heitä d100</button>
+		</nav>
+		<nav id="Wh40k">
+			<h4>How many attacks?</h4>
+			<label for="amount"></label><input id="amount" type="number" name="dice" placeholder="Syötä tähän noppien määrä"/>
+			<button id="nappi">Heitä nopat</button>
+		</nav>
+	
+	</section>
+		<footer>
+	
+	
+			<p>Website made by Riku Koski , Ricu Ruotsinsalo</p>
+			<p>Background by eberhard grossgasteiger from Pexels</p>
+	
+		</footer>
+		
+	</div>
+	<video autoplay muted loop>
+	<source src="background.mp4" type="video/mp4">
+	</video>
+	<script src="random.js"></script> <!--ÄLÄ SIIRRÄ!-->
+	<script src="java.js"></script>
+</body>
+</html>

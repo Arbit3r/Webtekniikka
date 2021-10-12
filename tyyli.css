@@ -1,0 +1,131 @@
+@charset "utf-8";
+/* CSS Document */
+/* testi */
+/* CSS HEX 
+--Musta: #4a4f52ff;
+--alabaster: #e0e2dbff;
+--timberwolf: #d2d4c8ff;
+--ash-gray: #b8bdb5ff;
+--rose-madder: #e71d36ff;*/
+/* SCSS Gradient 
+$gradient-top: linear-gradient(0deg, #e71d36ff, #b8bdb5ff, #d2d4c8ff, #e0e2dbff, #4a4f52ff);
+$gradient-right: linear-gradient(90deg, #e71d36ff, #b8bdb5ff, #d2d4c8ff, #e0e2dbff, #4a4f52ff);
+$gradient-bottom: linear-gradient(180deg, #e71d36ff, #b8bdb5ff, #d2d4c8ff, #e0e2dbff, #4a4f52ff);
+$gradient-left: linear-gradient(270deg, #e71d36ff, #b8bdb5ff, #d2d4c8ff, #e0e2dbff, #4a4f52ff);
+$gradient-top-right: linear-gradient(45deg, #e71d36ff, #b8bdb5ff, #d2d4c8ff, #e0e2dbff, #4a4f52ff);
+$gradient-bottom-right: linear-gradient(135deg, #e71d36ff, #b8bdb5ff, #d2d4c8ff, #e0e2dbff, #4a4f52ff);
+$gradient-top-left: linear-gradient(225deg, #e71d36ff, #b8bdb5ff, #d2d4c8ff, #e0e2dbff, #4a4f52ff);
+$gradient-bottom-left: linear-gradient(315deg, #e71d36ff, #b8bdb5ff, #d2d4c8ff, #e0e2dbff, #4a4f52ff);
+$gradient-radial: radial-gradient(#e71d36ff, #b8bdb5ff, #d2d4c8ff, #e0e2dbff, #4a4f52ff);*/
+
+
+#container{
+	display: block;
+	width: 90%;
+	padding: 0px;
+	border: solid;
+	border-width: 5px;
+	border-color: #4a4f52ff;
+	border-radius: 5px;
+	margin: auto;
+	position: static;
+}
+nav {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	height: 6%;
+	margin: 0px;
+	padding: 0px;
+	background: linear-gradient(170deg, #d2d4c8ff, #e0e2dbff);
+	position: -webkit-sticky;
+  	position: sticky;
+  	top: 0;
+	border-bottom: solid;
+	z-index: 10;
+
+}
+a.linkki{
+	display: flex;
+	justify-content: center;
+	margin: 2px;
+	padding: 3px;
+	font-family: 'Josefin Sans', sans-serif;
+	width: 100%;
+	height: 100%;
+	color: aqua;
+	text-decoration: none;
+}
+
+section{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	background: linear-gradient(225deg, #b8bdb5ff, #d2d4c8ff, #e0e2dbff);
+	margin: 0px;
+	padding: 0px;
+}
+h1 {
+	color: #e71d36ff;;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	font-family: 'Josefin Sans', sans-serif;
+}
+section p {
+	color: #4a4f52ff;
+	margin: 15px;
+	font-family: 'Noto Sans Mono', monospace;
+}
+footer {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	background: #b8bdb5ff;
+	margin-top: 1%;
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Noto Sans Mono', monospace;
+}
+body {
+	display: block; 
+	background-image: url("images/war.jpg");
+}
+a:visited {
+  	text-decoration: none;
+	color: black;
+}
+form.choice {
+	
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin-bottom: 50px;
+	font-family: 'Noto Sans Mono', monospace;
+	
+}
+#map {
+    width: 500px;
+    height: 500px;
+	overflow: hidden;
+	
+	
+}
+#map > div.leaflet-control-container > div.leaflet-top.leaflet-left > div > a.leaflet-control-zoom-in{
+	z-index: -2;
+}
+video {
+  	object-fit: cover;
+  	width: 100vw;
+  	height: 100vh;
+  	position: fixed;
+  	top: 0;
+  	left: 0;
+	z-index: -50;
+	
+}
+
+
+
+
+

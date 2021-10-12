@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+	<!-- Ohjeet
+
+1. Asettelu
+2.
+3.
+
+
+
+
+
+-->
+<!--Perus teksti -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap" rel="stylesheet">
+<!--Otsikko -->	
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+
+	
+	
+<head>
+	
+<meta charset="utf-8">
+<title>Random</title>
+<link rel="icon" href="dice.png">
+
+
+<link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>	
+<link rel="stylesheet" href="tyyli.css">
+<style>
+      #map {
+        /* configure the size of the map */
+        width: 500px;
+        height: 500px;
+      }
+    </style>
+</head>
+
+<body>
+	
+	
+	<div id="container">
+	<nav>
+		
+		<a class="linkki" onmouseover="over(this)" onmouseout="out(this)" href="index.html">Etusivu</a>
+		<a class="linkki" onmouseover="over(this)" onmouseout="out(this)" href="Random.html">Random</a>
+		<a class="linkki" onmouseover="over(this)" onmouseout="out(this)" href="Tietoa.html">Tietoa</a>
+		
+	</nav>
+
+	<section>
+	
+    <div id="map"></div>
+	</section>
+	</div>
+	<video autoplay muted loop>
+	<source src="background.mp4" type="video/mp4">
+	</video>
+	<script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+	<script src="kartta.js"></script>
+</body>
+</html>
