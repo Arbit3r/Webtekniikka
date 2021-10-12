@@ -38,9 +38,9 @@
 	<div id="container">
 	<nav>
 		
-		<p class="linkki" onmouseover="over(this)" onmouseout="out(this)">Etusivu</p>
-		<p class="linkki" onmouseover="over(this)" onmouseout="out(this)">Random</p>
-		<p class="linkki" onmouseover="over(this)" onmouseout="out(this)">Tietoa</p>
+		<a class="linkki" onmouseover="over(this)" onmouseout="out(this)" href="index.html">Etusivu</a>
+		<a class="linkki" onmouseover="over(this)" onmouseout="out(this)" href="Random.html">Random</a>
+		<a class="linkki" onmouseover="over(this)" onmouseout="out(this)" href="Tietoa.html">Tietoa</a>
 		
 	</nav>
 
@@ -55,22 +55,6 @@
 			In August 2018, researchers at the University of California, Berkeley published a paper introducing a fake dancing app that can create the impression of masterful dancing ability using AI.[18][19] This project expands the application of deepfakes to the entire body; previous works focused on the head or parts of the face.[18]</p>
 	
 	</section>
-		<nav id="DnD"> <!--Dnd dice roller-->
-			<h4>Modifier:</h4>
-			<label for="modifier"></label><input id="modifier" type="number" name="muunnin" value="0" placeholder="Syötä muuttuja"/>
-			<button id="nappi4">Heitä d4</button>
-			<button id="nappi6">Heitä d6</button>
-			<button id="nappi8">Heitä d8</button>
-			<button id="nappi10">Heitä d10</button>
-			<button id="nappi12">Heitä d12</button>
-			<button id="nappi20">Heitä d20</button>
-			<button id="nappi100">Heitä d100</button>
-		</nav>
-		<nav id="Wh40k">
-			<h4>How many attacks?</h4>
-			<label for="amount"></label><input id="amount" type="number" name="dice" placeholder="Syötä tähän noppien määrä"/>
-			<button id="nappi">Heitä nopat</button>
-		</nav>
 		<footer>
 	
 	
@@ -79,7 +63,9 @@
 		</footer>
 		
 	</div>
-
+	<video autoplay muted loop>
+	<source src="background.mp4" type="video/mp4">
+	</video>
 	<script src="java.js"></script> <!--ÄLÄ SIIRRÄ!-->
 </body>
 </html>

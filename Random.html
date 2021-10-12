@@ -24,7 +24,8 @@
 <head>
 	
 <meta charset="utf-8">
-<title>Untitled Document</title>
+<title>Random</title>
+<link rel="icon" href="dice.png">
 
 <link rel="stylesheet" href="tyyli.css">
 	
@@ -33,27 +34,25 @@
 
 <body>
 	
-	
 	<div id="container">
 	<nav>
 		
-		<p class="linkki" onmouseover="over(this)" onmouseout="out(this)">Etusivu</p>
-		<p class="linkki" onmouseover="over(this)" onmouseout="out(this)">Random</p>
-		<p class="linkki" onmouseover="over(this)" onmouseout="out(this)">Tietoa</p>
+		<a class="linkki" onmouseover="over(this)" onmouseout="out(this)" href="index.html">Etusivu</a>
+		<a class="linkki" onmouseover="over(this)" onmouseout="out(this)" href="Random.html">Random</a>
+		<a class="linkki" onmouseover="over(this)" onmouseout="out(this)" href="Tietoa.html">Tietoa</a>
 		
 	</nav>
 
 	<section>
-	
-		<h1>Tervetuloa Randomaus Sivustolle!</h1>
-		<img src="deepfake2.PNG" alt="deepfake">
-			<p>Academic research related to deepfakes lies predominantly within the field of computer vision, a subfield of computer science.[12] An early landmark project was the Video Rewrite program, published in 1997, which modified existing video footage of a person speaking to depict that person mouthing the words contained in a different audio track.[15] It was the first system to fully automate this kind of facial reanimation, and it did so using machine learning techniques to make connections between the sounds produced by a video's subject and the shape of the subject's face.[15]
-
-			Contemporary academic projects have focused on creating more realistic videos and on improving techniques.[16][17] The "Synthesizing Obama" program, published in 2017, modifies video footage of former president Barack Obama to depict him mouthing the words contained in a separate audio track.[16] The project lists as a main research contribution its photorealistic technique for synthesizing mouth shapes from audio.[16] The Face2Face program, published in 2016, modifies video footage of a person's face to depict them mimicking the facial expressions of another person in real time.[17] The project lists as a main research contribution the first method for re-enacting facial expressions in real time using a camera that does not capture depth, making it possible for the technique to be performed using common consumer cameras.[17]
-
-			In August 2018, researchers at the University of California, Berkeley published a paper introducing a fake dancing app that can create the impression of masterful dancing ability using AI.[18][19] This project expands the application of deepfakes to the entire body; previous works focused on the head or parts of the face.[18]</p>
-	
-	</section>
+		
+		<h1>Valitse haluamasi randomaus kone:</h1>
+		<form class="choice">
+  			<label>Kone:</label>
+  				<select id="selected" onChange="kone()">
+    				<option value="DnD">DnD</option>
+    				<option value="W40k">W40k</option>
+  				</select>
+		</form>
 		<nav id="DnD"> <!--Dnd dice roller-->
 			<h4>Modifier:</h4>
 			<label for="modifier"></label><input id="modifier" type="number" name="muunnin" value="0" placeholder="Syötä muuttuja"/>
@@ -70,15 +69,21 @@
 			<label for="amount"></label><input id="amount" type="number" name="dice" placeholder="Syötä tähän noppien määrä"/>
 			<button id="nappi">Heitä nopat</button>
 		</nav>
+	
+	</section>
 		<footer>
 	
 	
-			<p>Made by Riku Koski , Ricu Ruotsinsalo</p>
+			<p>Website made by Riku Koski , Ricu Ruotsinsalo</p>
+			<p>Background by eberhard grossgasteiger from Pexels</p>
 	
 		</footer>
 		
 	</div>
-
-	<script src="java.js"></script> <!--ÄLÄ SIIRRÄ!-->
+	<video autoplay muted loop>
+	<source src="background.mp4" type="video/mp4">
+	</video>
+	<script src="random.js"></script> <!--ÄLÄ SIIRRÄ!-->
+	<script src="java.js"></script>
 </body>
 </html>
