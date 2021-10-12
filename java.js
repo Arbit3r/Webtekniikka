@@ -2,6 +2,11 @@
 // hyvin iso meemi :))))
 'use strict';
 
+//Navigointi linkit
+function over(obj){obj.style.color = "#e71d36ff";}
+function out(obj) {obj.style.color = "black";}
+
+
 //D&D dice roller
 const nappid4 = document.getElementById("nappi4");
 const nappid6 = document.getElementById("nappi6");
