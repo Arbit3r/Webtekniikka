@@ -83,14 +83,25 @@ function d100(){
 // Warhammer 40k nopat
 const nappi = document.getElementById("nappi");
 const dice = document.getElementById("amount");
+
 nappi.addEventListener('click', attackRoll);
 function attackRoll(){
   let luvut = [];
   let times = parseInt(dice.value);
+
   for (let i=0; i < times; i++){
     let luku = 1 + Math.floor(rollDice()*6);
     luvut.push(luku);
     }
+
+  const FilterNumbers = function(luvut){
+    const target = document.getElementById("target");
+    let toHit = parseInt(target.value);
+    console.log("Target: ", toHit);
+    return luvut >= toHit;
+  }
+  const filtered = luvut.filter(FilterNumbers);
+  console.log("Osumia yhteensä: ", filtered.length);
 
   let count = {};
   luvut.forEach(function(i) { count[i] = (count[i]||0) + 1;});
