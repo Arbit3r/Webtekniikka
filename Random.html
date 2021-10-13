@@ -50,7 +50,7 @@
   			<label>Kone:</label>
   				<select id="selected" onChange="kone()">
     				<option value="DnD">DnD</option>
-    				<option value="W40k">W40k</option>
+    				<option value="Wh40k">W40k</option>
   				</select>
 		</form>
 		<nav id="DnD"> <!--Dnd dice roller-->
@@ -66,7 +66,9 @@
 		</nav>
 		<nav id="Wh40k">
 			<h4>How many attacks?</h4>
-			<label for="amount"></label><input id="amount" type="number" name="dice" placeholder="Syötä tähän noppien määrä"/>
+			<label for="amount"></label><input id="amount" type="number" name="dice" placeholder="Syötä heittojen määrä"/>
+			<h4>On what does the attack hit?</h4>
+			<label for="target"></label><input id="target" type="number" name="target" placeholder="Hits on what?"/>
 			<button id="nappi">Heitä nopat</button>
 		</nav>
 	
