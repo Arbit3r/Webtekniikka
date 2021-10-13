@@ -3,10 +3,10 @@
 /* testi */
 /* CSS HEX 
 --Musta: #4a4f52ff;
---alabaster: #e0e2dbff;
---timberwolf: #d2d4c8ff;
---ash-gray: #b8bdb5ff;
---rose-madder: #e71d36ff;*/
+--white: #e0e2dbff;
+--orange: #F49F0A;
+--blue: #9BA2FF;
+--red: #e71d36ff;*/
 /* SCSS Gradient 
 $gradient-top: linear-gradient(0deg, #e71d36ff, #b8bdb5ff, #d2d4c8ff, #e0e2dbff, #4a4f52ff);
 $gradient-right: linear-gradient(90deg, #e71d36ff, #b8bdb5ff, #d2d4c8ff, #e0e2dbff, #4a4f52ff);
@@ -24,9 +24,9 @@ $gradient-radial: radial-gradient(#e71d36ff, #b8bdb5ff, #d2d4c8ff, #e0e2dbff, #4
 	width: 90%;
 	padding: 0px;
 	border: solid;
-	border-width: 5px;
-	border-color: #4a4f52ff;
-	border-radius: 5px;
+	border-width: 4px;
+	border-color: #e71d36ff;
+	border-radius: 3px;
 	margin: auto;
 	position: static;
 }
@@ -53,7 +53,7 @@ a.linkki{
 	font-family: 'Josefin Sans', sans-serif;
 	width: 100%;
 	height: 100%;
-	color: aqua;
+	color: black;
 	text-decoration: none;
 }
 
@@ -61,12 +61,13 @@ section{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	background: linear-gradient(225deg, #b8bdb5ff, #d2d4c8ff, #e0e2dbff);
+	background: rgb(224,226,219);
+    background: linear-gradient(337deg, rgba(224,226,219,1) 0%, rgba(224,226,219,1) 35%, rgba(244,159,10,1) 100%);
 	margin: 0px;
 	padding: 0px;
 }
 h1 {
-	color: #e71d36ff;;
+	color: #4a4f52ff;
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -74,18 +75,20 @@ h1 {
 }
 section p {
 	color: #4a4f52ff;
-	margin: 15px;
+	margin: 20px;
 	font-family: 'Noto Sans Mono', monospace;
+	padding: 20px;
 }
 footer {
 	width: 100%;
 	display: flex;
 	justify-content: space-around;
-	background: #b8bdb5ff;
+	background: #4a4f52ff;
 	margin-top: 1%;
 	margin: 0px;
 	padding: 0px;
 	font-family: 'Noto Sans Mono', monospace;
+	color: #e0e2dbff;
 }
 body {
 	display: block; 
