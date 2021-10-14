@@ -25,7 +25,7 @@ $gradient-radial: radial-gradient(#e71d36ff, #b8bdb5ff, #d2d4c8ff, #e0e2dbff, #4
 	padding: 0px;
 	border: solid;
 	border-width: 4px;
-	border-color: #e71d36ff;
+	border-color: #4a4f52ff;
 	border-radius: 3px;
 	margin: auto;
 	position: static;
@@ -37,24 +37,27 @@ nav {
 	height: 6%;
 	margin: 0px;
 	padding: 0px;
-	background: linear-gradient(170deg, #d2d4c8ff, #e0e2dbff);
+	background: url("images/circuit.jpg");
 	position: -webkit-sticky;
   	position: sticky;
   	top: 0;
-	border-bottom: solid;
 	z-index: 10;
+	border-bottom: solid #4a4f52ff;
 
 }
 a.linkki{
 	display: flex;
 	justify-content: center;
-	margin: 2px;
-	padding: 3px;
+	margin: 5px;
+	padding: 5px;
 	font-family: 'Josefin Sans', sans-serif;
+	font-size: 2rem;
 	width: 100%;
 	height: 100%;
 	color: black;
 	text-decoration: none;
+	object-fit: contain;
+	overflow: hidden;
 }
 
 section{
@@ -62,33 +65,48 @@ section{
 	flex-wrap: wrap;
 	justify-content: center;
 	background: rgb(224,226,219);
-    background: linear-gradient(337deg, rgba(224,226,219,1) 0%, rgba(224,226,219,1) 35%, rgba(244,159,10,1) 100%);
+    background: linear-gradient(0deg, rgba(224,226,219,1) 0%, rgba(224,226,219,1) 35%, rgba(244,159,10,1) 100%);
 	margin: 0px;
 	padding: 0px;
+	object-fit: contain;
+	overflow: hidden;
 }
 h1 {
-	color: #4a4f52ff;
+	color: #4A4F52;
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	font-family: 'Josefin Sans', sans-serif;
+	font-size: 2rem;
 }
 section p {
-	color: #4a4f52ff;
+	color: black;
 	margin: 20px;
 	font-family: 'Noto Sans Mono', monospace;
+	font-size: 1rem;
 	padding: 20px;
+	overflow: hidden;
+	word-spacing: 3px;
+	line-height: 25px;
+	width: 100%;
+	
 }
 footer {
 	width: 100%;
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	background: #4a4f52ff;
-	margin-top: 1%;
 	margin: 0px;
 	padding: 0px;
 	font-family: 'Noto Sans Mono', monospace;
+	font-size: 1rem;
 	color: #e0e2dbff;
+}
+footer p {
+	margin-left: 40px;
+	margin-right: 40px;
+	padding: 0px;
+	overflow:inherit;
 }
 body {
 	display: block; 
@@ -108,7 +126,7 @@ form.choice {
 	
 }
 #map {
-    width: 800px;
+    width: 100%;
     height: 800px;
 	overflow: hidden;
 	
@@ -137,7 +155,15 @@ h4{
 button{
 	font-family: 'Noto Sans Mono', monospace;
 }
-
+section img {
+	object-fit: contain;
+	overflow: hidden;
+	padding: 25px;
+	margin: 25px;
+}
+#tulos {
+	text-align: center;
+}
 
 
 

@@ -1,24 +1,56 @@
 // JavaScript Document
 
 
+// Tulostetaan aluksi jotain
+document.getElementById('output').innerHTML = '<nav id="DnD"> <!--Dnd dice roller-->' +
+			'<h4>Modifier:</h4>' +
+			'<label for="modifier"></label><input id="modifier" type="number" name="muunnin" value="0" placeholder="Syötä muuttuja"/>' +
+			'<button id="nappi4" onClick="d4()">Heitä d4</button>' +
+			'<button id="nappi6" onClick="d6()">Heitä d6</button>' +
+			'<button id="nappi8" onClick="d8()">Heitä d8</button>' +
+			'<button id="nappi10" onClick="d10()">Heitä d10</button>' +
+			'<button id="nappi12" onClick="d12()">Heitä d12</button>' +
+			'<button id="nappi20" onClick="d20()">Heitä d20</button>' +
+			'<button id="nappi100" onClick="d100()">Heitä d100</button></nav>';
+
+// Koneen valinta
+function kone() {
+  	let kone = document.getElementById("selected").value;
+	console.log(kone);
+	if (kone === "Wh40k"){Wh40k();}
+	if (kone === "DnD"){DnD();}
+}
+
+// Eri Randomaus koneiden tulostus Html:ään
+function DnD(){
+	
+	
+	document.getElementById('output').innerHTML = '<nav id="DnD"> <!--Dnd dice roller-->' +
+			'<h4>Modifier:</h4>' +
+			'<label for="modifier"></label><input id="modifier" type="number" name="muunnin" value="0" placeholder="Syötä muuttuja"/>' +
+			'<button id="nappi4" onClick="d4()">Heitä d4</button>' +
+			'<button id="nappi6" onClick="d6()">Heitä d6</button>' +
+			'<button id="nappi8" onClick="d8()">Heitä d8</button>' +
+			'<button id="nappi10" onClick="d10()">Heitä d10</button>' +
+			'<button id="nappi12" onClick="d12()">Heitä d12</button>' +
+			'<button id="nappi20" onClick="d20()">Heitä d20</button>' +
+			'<button id="nappi100" onClick="d100()">Heitä d100</button></nav>';
+}
+function Wh40k(){
+	
+	document.getElementById('output').innerHTML = '<nav id="Wh40k">' +
+			'<h4>How many attacks?</h4>' +
+			'<label for="amount"></label><input id="amount" type="number" name="dice" placeholder="Syötä heittojen määrä"/>' +
+			'<h4>On what does the attack hit?</h4>' +
+			'<label for="target"></label><input id="target" type="number" name="target" placeholder="Hits on what?"/>' +
+			'<button id="nappi" onClick="attackRoll()">Heitä nopat</button></nav>';	
+}
+
 
 //D&D dice roller
-const nappid4 = document.getElementById("nappi4");
-const nappid6 = document.getElementById("nappi6");
-const nappid8 = document.getElementById("nappi8");
-const nappid10 = document.getElementById("nappi10");
-const nappid12 = document.getElementById("nappi12");
-const nappid20 = document.getElementById("nappi20");
-const nappid100 = document.getElementById("nappi100");
+
 const textBox = document.getElementById("modifier");
 
-nappid4.addEventListener("click", d4);
-nappid6.addEventListener("click", d6);
-nappid8.addEventListener("click", d8);
-nappid10.addEventListener("click", d10);
-nappid12.addEventListener("click", d12);
-nappid20.addEventListener("click", d20);
-nappid100.addEventListener("click", d100);
 function rollDice(){
  return Math.random();
 }
@@ -26,68 +58,58 @@ function d4(){
   let muuttuja = parseInt(textBox.value);
   let luku = 1 + Math.floor(rollDice()*4);
   let tulos = luku + muuttuja;
-  console.log("d4 tulos: ",tulos);
-
-  return tulos;
+  document.getElementById('tulos').innerHTML = "D4 heiton tulos: " + tulos;
 }
 function d6(){
   let muuttuja = parseInt(textBox.value);
   let luku = 1 + Math.floor(rollDice()*6);
   let tulos = luku + muuttuja;
-  console.log("d6 tulos: ", tulos)
-  return tulos;
+  document.getElementById('tulos').innerHTML = "D6 heiton tulos: " + tulos;
 
 }
 function d8(){
   let muuttuja = parseInt(textBox.value);
   let luku = 1 + Math.floor(rollDice()*8);
   let tulos = luku + muuttuja;
-  console.log("d8 tulos: ", tulos);
-  return tulos;
+  document.getElementById('tulos').innerHTML = "D8 heiton tulos: " + tulos;
 }
 function d10(){
   let muuttuja = parseInt(textBox.value);
   let luku = 1 + Math.floor(rollDice()*10);
   let tulos = luku + muuttuja;
-  console.log("d10 tulos: ", tulos);
-  return tulos;
+  document.getElementById('tulos').innerHTML = "D10 heiton tulos: " + tulos;
 }
 function d12(){
   let muuttuja = parseInt(textBox.value);
   let luku = 1 + Math.floor(rollDice()*12);
   let tulos = luku + muuttuja;
-  console.log("d12 tulos: ", tulos);
-  return tulos;
+  document.getElementById('tulos').innerHTML = "D12 heiton tulos: " + tulos;
 }
 function d20(){
   let muuttuja = parseInt(textBox.value);
   let luku = 1 + Math.floor(rollDice()*20);
   let tulos = luku + muuttuja;
   if (luku === 1){
-    console.log("Natural 1...");
+	document.getElementById('tulos').innerHTML = "Natural 1...";
   } else if (luku === 20){
-    console.log("Natural 20!");
+	document.getElementById('tulos').innerHTML = "Natural 20!";
   }else {
-  console.log("d20 tulos: ", tulos);}
-  return tulos;
+  document.getElementById('tulos').innerHTML = "D20 heiton tulos: " + tulos;}
 }
 function d100(){
   let muuttuja = parseInt(textBox.value);
   let luku = 1 + Math.floor(rollDice()*100);
   let tulos = luku + muuttuja;
-  console.log("d100 tulos: ", tulos);
-  return tulos;
+  document.getElementById('tulos').innerHTML = "D100 heiton tulos: " + tulos;
 }
 
 
 // Warhammer 40k nopat
-const nappi = document.getElementById("nappi");
-const dice = document.getElementById("amount");
 
-nappi.addEventListener('click', attackRoll);
 function attackRoll(){
-  let luvut = [];
-  let times = parseInt(dice.value);
+	const dice = document.getElementById("amount");
+  	let luvut = [];
+  	let times = parseInt(dice.value);
 
   for (let i=0; i < times; i++){
     let luku = 1 + Math.floor(rollDice()*6);
