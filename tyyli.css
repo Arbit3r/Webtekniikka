@@ -91,6 +91,9 @@ section p {
 	width: 100%;
 	
 }
+section video {
+	border: solid;
+}
 footer {
 	width: 100%;
 	display: flex;
@@ -135,7 +138,7 @@ form.choice {
 	
 	
 }
-video {
+video.tausta {
   	object-fit: cover;
   	width: 100vw;
   	height: 100vh;
