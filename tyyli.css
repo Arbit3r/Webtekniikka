@@ -203,5 +203,11 @@ blockquote{
 	text-align-last: center;
 	
 }
+	section img {
+	padding: 10px;
+	margin: 10px;
+	width: 50%;
+	height: 50%;
+}
 	
 }
