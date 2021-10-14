@@ -119,13 +119,20 @@ function attackRoll(){
   const FilterNumbers = function(luvut){
     const target = document.getElementById("target");
     let toHit = parseInt(target.value);
-    console.log("Target: ", toHit);
+    //console.log("Target: ", toHit);
     return luvut >= toHit;
   }
   const filtered = luvut.filter(FilterNumbers);
-  console.log("Osumia yhteensä: ", filtered.length);
+  document.getElementById('tulos').innerHTML ="Osumia yhteensä: "+ filtered.length;
 
-  let count = {};
+  let count = [], tulostus = "";
   luvut.forEach(function(i) { count[i] = (count[i]||0) + 1;});
-  console.log("Heitetyt luvut: ", count);
-}
+  //console.log("Heitetyt luvut: ", count);
+
+  for (let i = 1; i < count.length; i++){
+    tulostus += i + ":" + count[i] + "<br>";
+    console.log("tulostus on: ", tulostus);
+  }
+
+    document.getElementById('tulos').innerHTML ="Osumia yhteensä: "+ filtered.length + "<br>" + tulostus;
+  }
