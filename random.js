@@ -1,5 +1,6 @@
 // JavaScript Document
 
+'use strict';
 
 // Tulostetaan aluksi jotain
 document.getElementById('output').innerHTML = '<nav id="DnD"> <!--Dnd dice roller-->' +
@@ -19,6 +20,7 @@ function kone() {
 	console.log(kone);
 	if (kone === "Wh40k"){Wh40k();}
 	if (kone === "DnD"){DnD();}
+	if (kone === "Vitsi"){Vitsi();}
 }
 
 // Eri Randomaus koneiden tulostus Html:ään
@@ -44,6 +46,15 @@ function Wh40k(){
 			'<h4>On what does the attack hit?</h4>' +
 			'<label for="target"></label><input id="target" type="number" name="target" placeholder="Hits on what?"/>' +
 			'<button id="nappi" onClick="attackRoll()">Heitä nopat</button></nav>';	
+}
+function Vitsi(){
+	
+	
+	document.getElementById('output').innerHTML = '<nav id="Wh40k">' +
+	'<button id="jokebutton" onClick="get_joke_of_the_day()">Kerro vitsi</button></nav>';
+	
+	
+	
 }
 
 
@@ -133,3 +144,24 @@ function attackRoll(){
   }
     document.getElementById('tulos').innerHTML ="Osumia yhteensä: "+ filtered.length + "<br>" + tulostus;
   }
+// Jokes
+
+let vitsi;
+
+function get_joke_of_the_day() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+	 if (this.readyState == 4 && this.status == 200) {
+	     // Access the result here
+	     console.log("Kaikki ok");
+		 vitsi = JSON.parse(this.responseText);
+		 console.log(vitsi);
+		 document.getElementById("tulos").innerHTML = vitsi.contents.jokes[0].joke.text;
+		 
+	 }
+    };
+    xhttp.open("GET", "https://api.jokes.one/jod?category=animal", true);
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.setRequestHeader("X-JokesOne-Api-Secret", "YOUR API HERE");
+    xhttp.send();
+}
