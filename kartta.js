@@ -13,5 +13,10 @@ let map = new L.map('map' , mapOptions);
 let layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
 map.addLayer(layer);
 
-let marker = new L.Marker([51.958, 9.141]);
-marker.addTo(map);
+
+L.Routing.control({
+  waypoints: [
+    L.latLng(60.220261, 24.812242),
+    L.latLng(60.15163806308306, 25.04338090918575)
+  ]
+}).addTo(map);

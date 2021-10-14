@@ -131,7 +131,7 @@ function attackRoll(){
     const target = document.getElementById("target");
     let toHit = parseInt(target.value);
     return luvut >= toHit;
-  }
+  };
   const filtered = luvut.filter(FilterNumbers);
   document.getElementById('tulos').innerHTML ="Osumia yhteensä: "+ filtered.length;
 
