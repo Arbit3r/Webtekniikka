@@ -1,5 +1,5 @@
 //Navigointi linkit
-'use strict';
+"use strict";
 
 function over(obj){obj.style.color = "#e71d36ff";}
 function out(obj) {obj.style.color = "black";}    

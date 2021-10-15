@@ -1,6 +1,6 @@
 // JavaScript Document
 // hyvin iso meemi :))))
-'use strict';
+"use strict";
 
 //Navigointi linkit
 function over(obj){obj.style.color = "#e71d36ff";}

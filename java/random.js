@@ -1,6 +1,6 @@
 // JavaScript Document
 
-'use strict';
+"use strict";
 
 // Tulostetaan aluksi jotain
 document.getElementById('output').innerHTML = '<nav id="DnD"> <!--Dnd dice roller-->' +
