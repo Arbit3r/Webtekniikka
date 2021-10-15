@@ -93,6 +93,7 @@ section p {
 	word-spacing: 3px;
 	line-height: 25px;
 	width: 100%;
+	text-align: center;
 	
 }
 
@@ -114,6 +115,12 @@ footer {
 	font-family: 'Noto Sans Mono', monospace;
 	font-size: 1rem;
 	color: #e0e2dbff;
+}
+p.videoteskti {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	margin: auto;
 }
 
 footer p {
