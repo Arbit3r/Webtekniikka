@@ -1,17 +1,8 @@
 <!doctype html>
-<html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Ohjeet
+<html lang="fi">
 
-1. Asettelu
-2.
-3.
+<head>
 
-
-
-
-
--->
 <!--Perus teksti -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,13 +13,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
 
 
-	
-	
-<head>
-	
+<meta name="viewport" content="width=device-width, initial-scale=1.0">	
 <meta charset="utf-8">
 <title>Random</title>
-<link rel="icon" href="dice.png">
+<link rel="icon" href="images/dice.png">
 
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
@@ -55,6 +43,7 @@
 		<section>
 	
     		<div id="map"></div>
+			<p id="ukot">Random Oy  Santahaminantie 9, 00860 Helsinki</p>
 			<div class="henkilo">
 				<img src="images/ricu.png" alt="Ricu_Ruotsinsalo">
 				<h2>Ricu Ruotsinsalo</h2>
@@ -73,14 +62,14 @@
 	</footer>
 	</div>
 	
-	<video autoplay muted loop>
-	<source src="background.mp4" type="video/mp4">
+	<video autoplay muted loop class="tausta">
+	<source src="videos/background.mp4" type="video/mp4">
 	</video>
 	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
    crossorigin=""></script>
 	<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
 	<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
-	<script src="kartta.js"></script>
+	<script src="java/kartta.js"></script>
 </body>
 </html>
